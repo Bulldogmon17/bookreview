@@ -1,0 +1,11 @@
+<%# this is a comment %>
+
+<%# this books variable corresponds to the books variable in the index action %>
+<%# this will loop through each instance of a book in books %>
+<% @books.each do |book| %>
+	<%# book.title is the clickable link %>
+	<h2><%= link_to book.title, book_path(book)%></h2>
+<% end %>
+
+<%# provide a link back to the new page %>
+<%= link_to "Add Book", new_book_path %>

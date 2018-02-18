@@ -1,0 +1,10 @@
+<%# the title that is displayed corresponds to the param id passed into the
+find_book method (from the show action).  %>
+<h2><%= @book.title %></h2>
+<h3><%= @book.author %></h3>
+<p><%= @book.description %></p>
+
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_book_path(@book) %>
+<%# the delete method corresponds to the DELETE verb in rake routes. A javascript confirm message will appear. %>
+<%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?"} %>
